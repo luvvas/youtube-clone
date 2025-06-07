@@ -1,7 +1,8 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
+// Fix: invalid path: /protected (*)
 const isProtectedRoute = createRouteMatcher([
-    "/protected(*)"
+    "/protected(.*)"
 ])
 
 export default clerkMiddleware(async (auth, req) => {
