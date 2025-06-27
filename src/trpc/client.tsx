@@ -40,7 +40,7 @@ function getUrl() {
 // Fornece contexto do tRPC + React Query para o app.
 // Deve ser usado no topo da árvore React (ex: app/layout.tsx no Next.js).
 // Permite que o frontend use hooks como trpc.hello.useQuery(...) com cache e SSR funcionando corretamente.
-export function TRPCReactProvider(
+export function TRPCProvider(
     props: Readonly<{
         children: React.ReactNode;
     }>,
