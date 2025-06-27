@@ -34,3 +34,9 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## tRPC
+
+É uma biblioteca que permite a criação de APIs typesafe (com tipagem automática entre frontend e backend) sem a necessidade de gerar código ou schemas manuais como no GraphQL ou OpenAPI. Com ele, você escreve funções no backend, e elas ficam acessíveis no frontend com tipagem garantida por Typescript. Em outras palavras: você criar rotas no backend, e o frontend pode chamá-las como funç~eos normais, com todos os tipos inferidos automaticamente
+
+Set up with React Server Components (https://trpc.io/docs/client/react/server-components)
