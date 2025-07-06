@@ -1,16 +1,18 @@
 // Define um conjunto de rotas do tRPC
 
 import { z } from 'zod'
-import { baseProcedure, createTRPCRouter } from '../init'
+import { createTRPCRouter, protectedProcedure } from '../init'
 
 // Cria uma rota chamada hello que espera uma string como input e retorna um greeting.
 // Tipagem automática com Zod + tRPC
 export const appRouter = createTRPCRouter({
-    hello: baseProcedure.input(
+    hello: protectedProcedure.input(
         z.object({
             text: z.string(),
         }),
     ).query((opts) => {
+        console.log({ dbUser: opts.ctx.user })
+
         return {
             greeting: `Hello ${opts.input.text}`,
         }
